@@ -3,44 +3,57 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
-  {{> info}}
-  {{> test}}
-  
-
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
-
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
-</template>
-
-<template name="test">
+<template name="welcome">
 {{#markdown}}
-  
-# Markdown Test Template
 
-## Second level heading in markdown
+# Meteor Static Pages Test
 
-Regular text within the markdown test template
-
-## Second level heading in markdown
-
-### Third level heading in markdown
-
-Some more text
+Test site to demonstrate serving static content using meteor
 
 {{/markdown}}
+
+<a href="/test/test_item_1">Test item 1</a><br>
+<a href="/test/test_item_2">Test item 2</a><br>
+<a href="/test/test_item_3">Test item 3</a><br>
+<br>
+{{testitems}}
+</template>
+
+<template name="TestItemLayout">
+{{> yield}}
+<a href="/">Back to home</a>
+</template>
+
+<template name="test_item_1">
+{{#markdown}}
+
+# Test item #1
+
+Test item #1 content
+
+{{/markdown}}
+</template>
+
+<template name="test_item_2">
+{{#markdown}}
+
+# Test item #2
+
+Test item #2 content
+
+{{/markdown}}
+</template>
+
+<template name="test_item_3">
+
+{{#markdown}}
+
+# Test item #3
+
+Test item #3 content
+
+{{/markdown}}
+
 </template>
