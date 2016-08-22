@@ -2,10 +2,10 @@
 
 Demo project - loading static pages.
 
-This project demonstrates the use of the ```markdown``` package in template to
-support the display of static content by Meteor application.
+This project demonstrates the use of the ```markdown``` package in templates to
+support the display of static content by Meteor applications.
 
-To display the matrkdown content, add ```markdown``` to the packages file, ```.meteor/packages```.
+To display the markdown content, add ```markdown``` to the packages file, ```.meteor/packages```.
 
 Include markdown (can be mixed with HTML) in a template,
 
@@ -23,11 +23,11 @@ Markdown text
 
 Note: Markdown must start at the begining of a line and cannot be indented
 
-## Displaying list of templates
+## Displaying lists of templates
 
 The ```Template.forEach``` function in the ```aldeed:template-extension``` package can be used to create a
 list of all templates (and could be filtered based on parts of the template name).
 
-This has not been fully implemented in this example. Believe that the best way to create dyamic list of pages
-would be to seperatly store metadata about each page.
+This has not been fully implemented in this example. Believe that the best way to create a dyamic list of pages
+would be to seperatly store metadata about each page in a collection.
 
