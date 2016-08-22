@@ -19,7 +19,9 @@ Router.route('/test/:slug', function () {
 Template.welcome.helpers({
 	testitems: function() {
 
-		console.log(Template);
+		Template.forEach( function(t) {
+			console.log(t);
+		});
 
 		return "AAA";
 	}
